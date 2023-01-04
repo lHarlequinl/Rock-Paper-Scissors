@@ -1,0 +1,363 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Conv_3D-Sports-Bar";
+  src: url("../fonts/3D-Sports-Bar.eot");
+  src: local("☺"), url("../fonts/3D-Sports-Bar.woff") format("woff"), url("../fonts/3D-Sports-Bar.ttf") format("truetype"), url("../fonts/3D-Sports-Bar.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/*------------------------------------------------*/
+body {
+  font-family: "Conv_3D-Sports-Bar";
+  height: 100%;
+  font-size: 16px;
+  background-color: #ffea05;
+  color: rgb(0, 0, 0);
+}
+
+/*------------------------------------------------*/
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.conteiner {
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.main {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #000000;
+  background: #ffffff;
+  border-radius: 20px;
+  height: 35px;
+  width: 180px;
+  transition: all 0.3s;
+}
+.button:active {
+  position: relative;
+  top: 1px;
+}
+.button:hover {
+  color: #ffffff;
+  background: rgb(0, 0, 0);
+}
+
+.error {
+  box-shadow: 0 0 15px #ff0000;
+}
+
+.input {
+  padding: 0 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  background: #ffffff;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 30px;
+  width: 250px;
+  transition: all 0.2s;
+}
+.input:active {
+  position: relative;
+}
+.input:focus {
+  border: 2px solid #0082fc;
+}
+
+/*------game------*/
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  padding: 10px;
+}
+
+.game__title {
+  font-size: 35px;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.game__sign-up-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  padding: 10px;
+}
+
+.game__sign-up-username {
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  background: #ffffff;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 40px;
+  width: 250px;
+  transition: all 0.2s;
+}
+.game__sign-up-username_error {
+  box-shadow: 0 0 15px #ff0000;
+}
+.game__sign-up-username:active {
+  position: relative;
+}
+.game__sign-up-username:focus {
+  border: 2px solid #0082fc;
+}
+
+.game__sign-up-username_error {
+  box-shadow: 0 0 15px #ff0000;
+}
+
+.game__lobby {
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+}
+.game__lobby-title {
+  text-align: center;
+  font-size: 20px;
+  text-decoration: underline;
+}
+.game__lobby-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.game__lobby-player_you {
+  color: #167e24;
+}
+
+.game__loader {
+  height: 100px;
+  margin-bottom: 30px;
+}
+.game__loader-title {
+  text-align: center;
+  font-size: 28px;
+  font-style: italic;
+}
+
+.game__lobby-loader {
+  width: 75px;
+  height: 75px;
+  border: 8px solid #ffbb00;
+  box-shadow: 0 0 10px #ffbb00;
+  border-radius: 50%;
+  border-top-color: rgba(244, 197, 79, 0.5843137255);
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: 1s spin infinite linear;
+          animation: 1s spin infinite linear;
+  visibility: visible;
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.game__versus {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.game__loader-move {
+  height: 200px;
+}
+
+.game__enemy-player {
+  margin-bottom: 35px;
+  font-size: 45px;
+}
+
+.game__moves-title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.game__moves-text {
+  text-align: center;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.game__moves {
+  display: flex;
+  row-gap: 25px;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  flex-wrap: wrap;
+}
+
+.game__moves-item {
+  cursor: pointer;
+}
+.game__moves-item:hover {
+  box-shadow: 0 0 20px #f7f7f4;
+  transition: all 0.3s;
+  transform: scale(1.1);
+}
+
+.game__finish-title {
+  font-size: 40px;
+  font-style: italic;
+}
+.game__finish-title_win {
+  color: #00ac17;
+}
+.game__finish-title_lose {
+  color: #ae0202;
+}
+
+/*------footer------*/
+.footer {
+  margin-top: auto;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) and (max-width: 833px) {
+  .game__title {
+    font-size: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .game__title {
+    font-size: 25px;
+  }
+  .game__loader {
+    height: 200px;
+  }
+  .game__loader-move {
+    height: 250px;
+  }
+}
+@media (max-width: 390px) {
+  .game__enemy-player {
+    font-size: 38px;
+    margin-bottom: 60px;
+  }
+  .game__moves-item {
+    width: 90px;
+  }
+}/*# sourceMappingURL=style.css.map */

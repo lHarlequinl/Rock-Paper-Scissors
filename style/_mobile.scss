@@ -1,0 +1,24 @@
+@media (max-width: 767px) {
+	.game__title {
+		font-size: 25px;
+	}
+
+	.game__loader {
+		height: 200px;
+	}	
+
+	.game__loader-move {
+		height: 250px;
+	}
+}
+
+@media (max-width: 390px) {
+	.game__enemy-player {
+		font-size: 38px;
+		margin-bottom: 60px;
+	}
+
+	.game__moves-item {
+		width: 90px;
+	}
+}
